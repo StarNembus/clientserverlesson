@@ -29,7 +29,7 @@ def error_bytes_function2(word):
     print(new_str)
 
 
-error_bytes_function2(word_2)
+error_bytes_function2(word_4)
 
 
 
