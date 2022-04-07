@@ -1,0 +1,7 @@
+key_1:
+- comp
+- printer
+key_2: 2
+key_3:
+  comp: 3000€
+  printer: 500€

@@ -1,0 +1,18 @@
+{
+    "orders": [
+        {
+            "item": "kiwi",
+            "quantity": 10,
+            "price": 5.99,
+            "buyer": "Oleg",
+            "date": "2022-2-13"
+        },
+        {
+            "item": "apple",
+            "quantity": 5,
+            "price": 7,
+            "buyer": "Jake",
+            "date": "2022-2-13"
+        }
+    ]
+}

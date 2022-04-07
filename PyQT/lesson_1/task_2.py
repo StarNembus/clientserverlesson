@@ -1,0 +1,51 @@
+"""Написать функцию host_range_ping() (возможности которой основаны на функции из примера 1) для перебора ip-адресов
+ из заданного диапазона. Меняться должен только последний октет каждого адреса.
+По результатам проверки должно выводиться соответствующее сообщение."""
+
+
+from task_1_thread import check_is_ipaddress, host_ping
+
+
+def host_range_ping(get_list=False):
+
+    while True:
+        start_ip = input('Введите первый адрес: ')
+        try:
+            ipv4_start = check_is_ipaddress(start_ip)
+            last_oct = int(start_ip.split('.')[3])
+            break
+        except Exception as e:
+            print(e)
+    while True:
+        end_ip = input('Введите количество адресов для проверки: ')
+        if not end_ip.isnumeric():
+            print('Необходимо ввести числовое значение')
+        else:
+            if (last_oct + int(end_ip)) > 255 + 1:
+                print(f'Максимальное число хостов {255 + 1 - last_oct}')
+            else:
+                break
+
+    hosts_list = []
+    [hosts_list.append(str(ipv4_start + x)) for x in range(int(end_ip))]
+    if not get_list:
+        host_ping(hosts_list)
+    else:
+        return host_ping(hosts_list, True)
+
+
+if __name__ == '__main__':
+    host_range_ping()
+
+
+
+
+
+
+
+
+
+
+
+
+
